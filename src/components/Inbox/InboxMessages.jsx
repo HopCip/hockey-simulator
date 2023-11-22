@@ -27,6 +27,8 @@ import {
   DialogTitle,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import { GlobalContext } from './../../App';
+import { useContext } from 'react';
 // import { visuallyHidden } from '@mui/utils';
 
 function createData(id, name, sender, date) {
@@ -236,18 +238,23 @@ export default function EnhancedTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [clickedRows, setClickedRows] = React.useState([]);
+  const [inboxCount, setInboxCount] = React.useState(rows.length);
 
   const [open, setOpen] = React.useState(false);
   const [selectedMessage, setSelectedMessage] = React.useState(null);
+  const { handleInboxAction } = useContext(GlobalContext);
+
+  const result = inboxCount - clickedRows.length;
+  handleInboxAction(result);
 
   const handleClose = () => {
     setOpen(false);
   };
 
   const handleClick = (id) => {
-    console.log(`id: ${id}`);
-    setClickedRows((prevClickedRows) => [...prevClickedRows, id]);
-
+    if (!clickedRows.includes(id)) {
+      setClickedRows((prevClickedRows) => [...prevClickedRows, id]);
+    }
     const selectedRow = rows.find((row) => row.id === id);
     setSelectedMessage(selectedRow);
 

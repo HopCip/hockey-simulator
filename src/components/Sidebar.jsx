@@ -25,6 +25,9 @@ import { Link } from 'react-router-dom';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 
+import { GlobalContext } from './../App';
+import { useContext } from 'react';
+
 const Sidebar = () => {
   const [openTables, setOpenTables] = useState(false);
   const [openTactics, setOpenTactics] = useState(false);
@@ -41,6 +44,9 @@ const Sidebar = () => {
   const handleClickTransfers = () => {
     setOpenTransfers(!openTransfers);
   };
+
+  const { messages } = useContext(GlobalContext);
+  console.log(messages);
 
   return (
     <Box
@@ -72,7 +78,7 @@ const Sidebar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Badge badgeContent={4} color="primary">
+                <Badge badgeContent={messages} color="primary">
                   <EmailIcon />
                 </Badge>
               </ListItemIcon>

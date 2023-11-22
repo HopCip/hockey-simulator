@@ -17,6 +17,11 @@ export const GlobalContext = createContext();
 export const GlobalProvider = ({ children }) => {
   const [money, setMoney] = useState(235000);
   const [moneyMonthly, setMoneyMonthly] = useState(17750);
+  const [messages, setMessages] = useState(0);
+
+  const handleInboxAction = (result) => {
+    setMessages(result);
+  };
 
   // const updateMoney = (amount) => {
   //   setMoney((prevMoney) => prevMoney + amount);
@@ -24,7 +29,15 @@ export const GlobalProvider = ({ children }) => {
 
   return (
     <GlobalContext.Provider
-      value={{ money, setMoney, moneyMonthly, setMoneyMonthly }}
+      value={{
+        money,
+        setMoney,
+        moneyMonthly,
+        setMoneyMonthly,
+        messages,
+        setMessages,
+        handleInboxAction
+      }}
     >
       {children}
     </GlobalContext.Provider>
