@@ -424,7 +424,6 @@ export default function EnhancedTable() {
             eius deserunt! Maiores soluta eveniet suscipit laboriosam mollitia
             odit pariatur eum! Lorem ipsum dolor sit amet, consectetur
             adipisicing elit. Vel optio magnam sapiente cum cupiditate
-            necessitatibus enim amet, excepturi nemo nesciunt maiores, aliquam
             beatae rerum consequuntur adipisci distinctio qui sit dolores?
           </Typography>
           <Typography sx={{ paddingTop: '4em' }}>
