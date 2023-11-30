@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import LastPlayers from './LastPlayers';
+import FormerPlayers from './FormerPlayers';
 import BestPlayers from './BestPlayers';
 import Characteristic from './Characteristic';
 import ClubDescription from './ClubDescription';
@@ -36,7 +36,7 @@ const Club = () => {
           </Box>
           <Box><ClubStanding></ClubStanding></Box>
           <Box>
-            <LastPlayers></LastPlayers>
+            <FormerPlayers></FormerPlayers>
           </Box>
         </Box>
       </Box>
