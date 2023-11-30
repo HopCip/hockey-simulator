@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import OneDepartment from './OneDepartment';
+import OneDepartment from './Department';
 import dataDepartment from './dataDepartment.json';
 
 const Departmens = () => {

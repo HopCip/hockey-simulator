@@ -10,7 +10,7 @@ import {
   Paper,
   Typography,
 } from '@mui/material';
-import { GlobalContext } from './../../App';
+import { GlobalContext } from '../../App';
 
 import Rating from '@mui/material/Rating';
 
