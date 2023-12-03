@@ -424,7 +424,7 @@ export default function EnhancedTable() {
             eius deserunt! Maiores soluta eveniet suscipit laboriosam mollitia
             odit pariatur eum! Lorem ipsum dolor sit amet, consectetur
             adipisicing elit. Vel optio magnam sapiente cum cupiditate hfdhdfhdf.
-            beatae rerum consequuntur adipisci distinctio qui sit dolores?
+            beatae rerum consequuntur adipisci distinctio qui sit.
           </Typography>
           <Typography sx={{ paddingTop: '4em' }}>
             {selectedMessage?.sender}
