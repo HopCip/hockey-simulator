@@ -3,9 +3,15 @@ import { Box, Paper, Typography } from '@mui/material';
 import dataLastGame from './dataLastGame.json';
 import LastGameOne from './LastGameOne';
 
+const lastGames = dataLastGame.map((oneInfo) => {
+  return <LastGameOne key={oneInfo.id} {...oneInfo} />;
+});
+
 const LastGame = () => {
   return (
-    <Paper elevation={3}
+    <Paper
+      elevation={3}
+      
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -35,9 +41,7 @@ const LastGame = () => {
           flexDirection: 'column',
         }}
       >
-        {dataLastGame.map((oneInfo) => {
-          return <LastGameOne key={oneInfo.id} {...oneInfo} />;
-        })}
+        {lastGames}
       </Box>
     </Paper>
   );
