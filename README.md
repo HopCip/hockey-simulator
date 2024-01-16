@@ -6,5 +6,9 @@ HTML, CSS, JAVASCRIPT, REACT, MATERIAL UI
 
 - IN PROGRESS
 
+## Project description
+
+- THIS PROJECT IS NOT SUITABLE FOR SMALLER SCREENS
+
 # Link
 https://hockey-project.netlify.app/
